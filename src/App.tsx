@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import image from './img/me.jpg';
 import './App.css';
 
 function App() {
@@ -122,7 +122,7 @@ function App() {
 		<div className="sidebar">
 
 			<div className="photo">
-				<img src="./resouces\me.jpg" alt=""></img>
+        <img src={image} alt="image" />
 			</div>
 
 			<h2>Competencies</h2>
