@@ -1,6 +1,7 @@
 import image from "../../../img/me.jpg";
+import Competencies from "./Competencies";
 
-export default function Resume() {
+export default function Resume(): JSX.Element {
   return (
     <>
       <div className="main-content">
@@ -24,17 +25,17 @@ export default function Resume() {
           <div className="experience">
             <h4>
               <p>
-                {" "}
+                
                 Dec 2022 – Present: Senior Software Engineer, SoftServe,
-                full-time{" "}
+                full-time
               </p>
               <p>
                 Jun 2021 – Dec 2022: Middle Software Engineer, SoftServe,
-                full-time{" "}
+                full-time
               </p>
               <p className="technologies">
-                {" "}
-                (Hapi.js, React.js, TypeScript, JavaScript, Ruby on Rails){" "}
+                
+                (Hapi.js, React.js, TypeScript, JavaScript, Ruby on Rails)
               </p>
             </h4>
             <ul className="responsibilities">
@@ -69,7 +70,7 @@ export default function Resume() {
               </li>
               <li>
                 Was doing cross-team knowledge transfer sessions, technical
-                interviews and onboarding.{" "}
+                interviews and onboarding.
               </li>
               <li>
                 Participated in daily stand-ups, sprint planning, and code
@@ -84,12 +85,12 @@ export default function Resume() {
           <div className="experience">
             <h4>
               <p>
-                {" "}
+                
                 Now 2020 – Jun 2021: Middle back-end developer, Magisoft
                 Solutions, full-time
               </p>
               <p className="technologies">
-                {" "}
+                
                 (Nest.js, Express.js, TypeScript, JavaScript)
               </p>
             </h4>
@@ -128,15 +129,15 @@ export default function Resume() {
           <h3>Education:</h3>
           <ul>
             <li>
-              01.09.2018 – 31.12.2019 -{" "}
+              01.09.2018 – 31.12.2019 -
               <b>
-                {" "}
+                
                 National University of Kryvyi Rih - Master's Degree in Software
                 engineering
               </b>
             </li>
             <li>
-              01.09.2014 – 30.06.2018 -{" "}
+              01.09.2014 – 30.06.2018 -
               <b>
                 National University of Kryvyi Rih - Bachelor's Degree in
                 Software engineering
@@ -173,57 +174,7 @@ export default function Resume() {
           <img src={image} alt="" />
         </div>
 
-        <h2>Competencies</h2>
-        <ul>
-          <li>
-            <p>JavaScript</p>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: "80%" }}></div>
-            </div>
-          </li>
-          <li>
-            <p>TypeScript</p>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: "75%" }}></div>
-            </div>
-          </li>
-          <li>
-            <p>React.js</p>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: "60%" }}></div>
-            </div>
-          </li>
-          <li>
-            <p>Node.js</p>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: "80%" }}></div>
-            </div>
-          </li>
-          <li>
-            <p>HTML</p>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: "60%" }}></div>
-            </div>
-          </li>
-          <li>
-            <p>CSS</p>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: "50%" }}></div>
-            </div>
-          </li>
-          <li>
-            <p>MongoDB</p>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: "75%" }}></div>
-            </div>
-          </li>
-          <li>
-            <p>MySQL</p>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: "75%" }}></div>
-            </div>
-          </li>
-        </ul>
+        <Competencies/>
 
         <h2>Personal Information</h2>
         <ul>
