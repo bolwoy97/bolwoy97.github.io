@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { getBackEndUrl } from "../../../utils/config";
 
 export default function Competencies(): JSX.Element {
   const [competencies, setCompetencies] = useState([]);
-  const backUrl = process.env.BACK_URL || 'http://localhost:8080';
+  const backUrl = getBackEndUrl();
+
   useEffect(() => {
     fetch(`${backUrl}/resume/competencies`)
       .then((response) => response.json())
@@ -13,6 +15,7 @@ export default function Competencies(): JSX.Element {
         console.log(err.message);
       });
   }, [backUrl]);
+
   return (
     <>
       <h2>Competencies</h2>
