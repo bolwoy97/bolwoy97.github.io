@@ -1,26 +1,26 @@
-import { useEffect, useState } from "react";
 import { getBackEndUrl } from "../../../utils/config";
+import { useQuery } from "react-query";
+import Spinner from "../../common/Spinner";
 
 export default function Competencies(): JSX.Element {
-  const [competencies, setCompetencies] = useState([]);
+  // const [competencies, setCompetencies] = useState([]);
   const backUrl = getBackEndUrl();
 
-  useEffect(() => {
+  const { isLoading, error, data: competencies = [] } = useQuery("todos", () =>
     fetch(`${backUrl}/resume/competencies`)
       .then((response) => response.json())
-      .then(({ data }) => {
-        setCompetencies(data);
-      })
+      .then(({ data }) => data)
       .catch((err) => {
         console.log(err.message);
-      });
-  }, [backUrl]);
+      })
+  );
 
   return (
     <>
       <h2>Competencies</h2>
       <ul>
-        {competencies.map(({name, value}) => {
+        {isLoading && <Spinner />}
+        {competencies.map(({ name, value }: { name: string, value: string }) => {
           return (
             <li>
               <p>{name}</p>
